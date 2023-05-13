@@ -10,3 +10,7 @@ docker build -t alef123vinicius:micro-projeto-backend .
 
 docker run -d -p 8080:8080 alef123vinicius:micro-projeto-backend .
 
+export MYUSER=dbusermicro
+export MYPASSWORD=aulamicro2023
+export HOSTNAME=172.17.0.3
+
