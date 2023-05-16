@@ -6,9 +6,9 @@ spring.datasource.password=aulamicro2023
 
 mvn clean package
 mvn -Dmaven.test.skip clean  package
-docker build -t alef123vinicius:micro-projeto-backend .
+docker build -t micro-projeto-backend .
 
-docker run -d -p 8080:8080 alef123vinicius:micro-projeto-backend .
+docker run -d -p 8080:8080 micro-projeto-backend .
 
 export MYUSER=dbusermicro
 export MYPASSWORD=aulamicro2023

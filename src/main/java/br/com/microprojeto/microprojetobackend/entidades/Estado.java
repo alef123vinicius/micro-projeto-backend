@@ -6,6 +6,11 @@ import javax.persistence.*;
 @Table(name = "estados")
 public class Estado {
 
+    /**
+     * @Id define o id da classe
+     * @GeneratedValue define que o Jpa será responsável por gerenciar a geração do id da classe.
+     * @Column define o nome da coluna e algumas propriedades como length, por exemplo.
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "IDESTADO")
