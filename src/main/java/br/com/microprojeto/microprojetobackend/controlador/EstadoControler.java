@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+@CrossOrigin(maxAge = 3600)
 /**
  * @RestController inclui as anotações @Controller e @Responsebody, ou seja, simplifica a implementação do controlador
  * Cada método então, será serializado com retorno HttpResponse
  */
 @RestController
-@CrossOrigin(origins = {"http://frontend-service:80", "http://172.18.0.2:32585/"}, allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
+//@CrossOrigin(origins = {"http://frontend-service:80", "http://172.18.0.2:32585/"}, allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
 
 /**
  * Define uma rota no qual indicará o nome do endpoint que podemos acessar
@@ -38,6 +39,7 @@ public class EstadoControler {
      * Definindo um método GET sem adição de rota
      * apenas GET /estados 
     */
+
     @GetMapping("")
     public List<Estado> listarEstados(){
         return estadoServico.listarTodosEstados();
