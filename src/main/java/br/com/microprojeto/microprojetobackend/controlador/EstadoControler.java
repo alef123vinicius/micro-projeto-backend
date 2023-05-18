@@ -15,6 +15,8 @@ import java.util.NoSuchElementException;
  * Cada método então, será serializado com retorno HttpResponse
  */
 @RestController
+@CrossOrigin(origins = {"http://frontend-service:80", "http://172.18.0.2:32585/"}, allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
+
 /**
  * Define uma rota no qual indicará o nome do endpoint que podemos acessar
  * Pode ser definido dentro da classe os sub métodos GET, POST, PUT, DELETE com
